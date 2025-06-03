@@ -67,7 +67,7 @@ const MobileLogo = memo(function MobileLogo() {
           Essence
         </span>
         <span className="text-[10px] font-medium text-muted-foreground tracking-wide uppercase">
-          Studio
+          Studio London
         </span>
       </div>
     </div>

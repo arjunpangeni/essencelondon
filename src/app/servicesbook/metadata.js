@@ -30,11 +30,5 @@ export const metadata = {
         locale: "en_GB",
         type: "website",
     },
-    twitter: {
-        card: "summary_large_image",
-        title: "Services & Pricing | Essence Massage Studio London",
-        description:
-            "Explore our full range of massage services and pricing at Essence Massage Studio in Chiswick, London. Book aromatherapy, deep tissue, Swedish, sports, and pregnancy massages.",
-        images: ["/bed.jpeg"],
-    },
+
 };

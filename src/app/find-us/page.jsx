@@ -18,7 +18,6 @@ export default function FindUs() {
   const [todayHours, setTodayHours] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useMobilecheck();
-  const phoneNumberone = "07721689515";
   const phoneNumbertwo = "07471243224";
 
   const businessHours = {
@@ -134,12 +133,7 @@ export default function FindUs() {
                 <h3 className="font-semibold text-lg mb-2 font-serif">
                   Call Us
                 </h3>
-                <CallButton
-                  phoneNumber={phoneNumberone}
-                  className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors text-lg font-medium block cursor-pointer"
-                >
-                  {phoneNumberone}
-                </CallButton>
+
                 <CallButton
                   phoneNumber={phoneNumbertwo}
                   className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors text-lg font-medium block cursor-pointer"

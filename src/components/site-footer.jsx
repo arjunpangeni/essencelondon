@@ -141,10 +141,10 @@ const SiteFooter = memo(function SiteFooter() {
                 <div className="text-sm">
                   <p className="font-medium text-foreground">Call Us</p>
                   <a
-                    href="tel:07721689515"
+                    href="tel:07471243224"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    07721689515
+                    07471243224
                   </a>
                 </div>
               </div>

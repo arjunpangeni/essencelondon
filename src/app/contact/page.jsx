@@ -15,7 +15,6 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const isMobile = useMobilecheck();
-  const phoneNumberone = "07721689515";
   const phoneNumbertwo = "07471243224";
 
   const handleInputChange = (e) => {
@@ -111,17 +110,12 @@ Email: ${formData.email}`;
               <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
                 Call Us
               </h3>
-              <CallButton
-                phoneNumber={phoneNumberone}
-                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors text-lg font-medium cursor-pointer"
-              >
-                {phoneNumberone}
-              </CallButton>
+
               <CallButton
                 phoneNumber={phoneNumbertwo}
                 className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors text-lg font-medium cursor-pointer"
               >
-                {phoneNumberone}
+                {phoneNumbertwo}
               </CallButton>
               <p className="text-sm text-gray-500 dark:text-gray-500 mt-2">
                 {isMobile ? "Tap to call" : "Click for options"}

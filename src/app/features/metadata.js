@@ -28,6 +28,13 @@ export const metadata = {
         ],
         locale: "en_GB",
         type: "website",
+        facebook: {
+            app_id: "YOUR_FACEBOOK_APP_ID", // Optional: add your Facebook App ID if available
+            page: "https://www.facebook.com/profile.php?id=61575293143383"
+        },
+        instagram: {
+            profile: "https://www.instagram.com/essencemassagelondon"
+        }
     },
     twitter: {
         card: "summary_large_image",

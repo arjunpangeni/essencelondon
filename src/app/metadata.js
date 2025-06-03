@@ -31,6 +31,12 @@ export const metadata = {
         ],
         locale: "en_GB",
         type: "website",
+        facebook: {
+            page: "https://www.facebook.com/profile.php?id=61575293143383"
+        },
+        instagram: {
+            profile: "https://www.instagram.com/essencemassagelondon"
+        }
     },
     twitter: {
         card: "summary_large_image",
