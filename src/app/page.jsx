@@ -128,7 +128,7 @@ const testimonials = [
     id: 3,
     name: "Emma Wilson",
     rating: 5,
-    text: "The hot stone therapy was incredible! The therapist was skilled and attentive, and the studio is immaculately clean. This is now my go-to place for relaxation.",
+    text: "The Back, Neck & Shoulders Massage was incredible! The therapist was skilled and attentive, and the studio is immaculately clean. This is now my go-to place for relaxation.",
     location: "West London",
   },
   {
@@ -468,8 +468,8 @@ export default function Home() {
                   Ready to Experience Deep Relaxation?
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
-                  Book your massage session today and enjoy 15% off your first
-                  visit. Your journey to wellness starts here.
+                  Reclaim your calm—book your massage session today and take the
+                  first step toward total wellness.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <Link

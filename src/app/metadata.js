@@ -29,6 +29,7 @@ export const metadata = {
                 alt: "Essence Massage Studio London Hero Image",
             },
         ],
+        image: "https://www.essencemassage.uk/essencemain1.jpg", // Add this line for extra compatibility
         locale: "en_GB",
         type: "website",
         facebook: {
