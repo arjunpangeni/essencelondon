@@ -19,11 +19,11 @@ export const metadata = {
         title: "Essence Massage Studio London | Professional Massage in Chiswick",
         description:
             "Experience deep relaxation and wellness at Essence Massage Studio in Chiswick, London. Book aromatherapy, deep tissue, Swedish, and sports massages with certified therapists.",
-        url: "https://essencemassagestudio.co.uk/",
+        url: "https://www.essencemassage.uk/",
         siteName: "Essence Massage Studio London",
         images: [
             {
-                url: "/essencemain1.jpg",
+                url: "https://www.essencemassage.uk/essencemain1.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Essence Massage Studio London Hero Image",
@@ -43,6 +43,6 @@ export const metadata = {
         title: "Essence Massage Studio London | Professional Massage in Chiswick",
         description:
             "Experience deep relaxation and wellness at Essence Massage Studio in Chiswick, London. Book aromatherapy, deep tissue, Swedish, and sports massages with certified therapists.",
-        images: ["/essencemain1.jpg"],
+        images: ["https://www.essencemassage.uk/essencemain1.jpg"],
     },
 };
