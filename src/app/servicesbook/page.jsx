@@ -14,6 +14,8 @@ import {
 
 const today = new Date().toISOString().split("T")[0];
 
+// updated links to use treatwell booking
+
 const classicMassages = [
   {
     id: 1,
