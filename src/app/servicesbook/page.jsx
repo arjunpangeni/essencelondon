@@ -12,165 +12,105 @@ import {
   Tag,
 } from "lucide-react";
 
+const today = new Date().toISOString().split("T")[0];
+
 const classicMassages = [
   {
     id: 1,
     name: "Deep Tissue Massage",
     icon: "💪",
     pricing: [
-      {
-        duration: "30 minutes",
-        price: "£39",
-      },
-      {
-        duration: "1 Hour",
-        price: "£65",
-      },
-      {
-        duration: "1 Hour 30 minutes",
-        price: "£90",
-      },
+      { duration: "30 minutes", price: "£39" },
+      { duration: "1 Hour", price: "£65" },
+      { duration: "1 Hour 30 minutes", price: "£90" },
     ],
     shortDescription:
       "Firmer pressure targeting muscle knots and trigger points for tension relief.",
     fullDescription:
       "During a deep tissue massage, a firmer pressure is used and more specific attention is paid to muscle knots or trigger points. If you have specific muscles or trigger points that need individual attention, a deep tissue massage can help ease tension, increase the range of motion, and relieve chronic pain.",
-    bookingLink:
-      "https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5375514%22%2C%22optionIds%22%3A%5B%2210235645%22%5D%7D%5D&date=2025-06-03",
+    bookingLink: `https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5375514%22%2C%22optionIds%22%3A%5B%2210235645%22%5D%7D%5D&date=${today}`,
   },
   {
     id: 2,
     name: "Swedish Massage",
     icon: "🌿",
     pricing: [
-      {
-        duration: "30 minutes",
-        price: "£39",
-      },
-      {
-        duration: "1 Hour",
-        price: "£65",
-      },
-      {
-        duration: "1 Hour 30 minutes",
-        price: "£90",
-      },
+      { duration: "30 minutes", price: "£39" },
+      { duration: "1 Hour", price: "£65" },
+      { duration: "1 Hour 30 minutes", price: "£90" },
     ],
     shortDescription:
       "Perfect for stress relief and resetting postural problems from repetitive motions.",
     fullDescription:
       "Swedish massage is a perfect way to relieve stress and muscle tension and reset any postural problems that have developed from repetitive motions or overuse of specific muscles.",
-    bookingLink:
-      "https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5375520%22%2C%22optionIds%22%3A%5B%2210235663%22%5D%7D%5D&date=2025-06-03",
+    bookingLink: `https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5375520%22%2C%22optionIds%22%3A%5B%2210235663%22%5D%7D%5D&date=${today}`,
   },
   {
     id: 3,
     name: "Relaxing Massage",
     icon: "😌",
     pricing: [
-      {
-        duration: "30 minutes",
-        price: "£39",
-      },
-      {
-        duration: "1 Hour",
-        price: "£65",
-      },
-      {
-        duration: "1 Hour 30 minutes",
-        price: "£90",
-      },
+      { duration: "30 minutes", price: "£39" },
+      { duration: "1 Hour", price: "£65" },
+      { duration: "1 Hour 30 minutes", price: "£90" },
     ],
     shortDescription:
       "Soft, soothing massage to eliminate muscle tension and relieve stress.",
     fullDescription:
       "A relaxing massage helps eliminate accumulated muscle tension and relieves stress. Sometimes a soft, soothing massage is all you need to manage a high-stress job or a moment of exceptional tension.",
-    bookingLink:
-      "https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5375521%22%2C%22optionIds%22%3A%5B%2210235665%22%5D%7D%5D&date=2025-06-03",
+    bookingLink: `https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5375521%22%2C%22optionIds%22%3A%5B%2210235665%22%5D%7D%5D&date=${today}`,
   },
   {
     id: 4,
     name: "Aromatherapy Massage",
     icon: "🌸",
     pricing: [
-      {
-        duration: "30 minutes",
-        price: "£39",
-      },
-      {
-        duration: "1 Hour",
-        price: "£65",
-      },
-      {
-        duration: "1 Hour 30 minutes",
-        price: "£90",
-      },
+      { duration: "30 minutes", price: "£39" },
+      { duration: "1 Hour", price: "£65" },
+      { duration: "1 Hour 30 minutes", price: "£90" },
     ],
     shortDescription:
       "Swedish massage techniques combined with essential oil aromatherapy.",
     fullDescription:
       "The aromatherapy massage combines soothing Swedish massage techniques with essential oil aromatherapy. Aromatherapy makes an already relaxing and invigorating massage all the more therapeutic.",
-    bookingLink:
-      "https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5375522%22%2C%22optionIds%22%3A%5B%2210235669%22%5D%7D%5D&date=2025-06-03",
+    bookingLink: `https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5375522%22%2C%22optionIds%22%3A%5B%2210235669%22%5D%7D%5D&date=${today}`,
   },
   {
     id: 5,
     name: "Foot Massage",
     icon: "🦶",
-    pricing: [
-      {
-        duration: "30 minutes",
-        price: "£39",
-      },
-    ],
+    pricing: [{ duration: "30 minutes", price: "£39" }],
     shortDescription:
       "Combines soothing massage with therapeutic benefits of reflexology.",
     fullDescription:
       "Foot massage combines the soothing side of massage with the therapeutic benefits of reflexology. This is the perfect treatment for anyone who spends long hours on their feet or suffers from stress and anxiety.",
-    bookingLink:
-      "https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5380894%22%2C%22optionIds%22%3A%5B%2210246300%22%5D%7D%5D&date=2025-06-03", // Placeholder
+    bookingLink: `https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5380894%22%2C%22optionIds%22%3A%5B%2210246300%22%5D%7D%5D&date=${today}`,
   },
   {
     id: 6,
     name: "Back, Neck & Shoulders Massage",
     icon: "🫸",
-    pricing: [
-      {
-        duration: "30 minutes",
-        price: "£39",
-      },
-    ],
+    pricing: [{ duration: "30 minutes", price: "£39" }],
     shortDescription:
       "Ideal solution for upper body muscle tension and postural problems.",
     fullDescription:
       "Back, neck and shoulders massage is the ideal solution to muscle tension caused by knots or postural problems in the upper body. Release tension, increase your range of motion and relieve chronic pain with this essential massage.",
-    bookingLink:
-      "https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5380896%22%2C%22optionIds%22%3A%5B%2210246303%22%5D%7D%5D&date=2025-06-03", // Placeholder
+    bookingLink: `https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5380896%22%2C%22optionIds%22%3A%5B%2210246303%22%5D%7D%5D&date=${today}`,
   },
   {
     id: 7,
     name: "Pregnancy Massage",
     icon: "🤰",
     pricing: [
-      {
-        duration: "30 minutes",
-        price: "£39",
-      },
-      {
-        duration: "1 Hour",
-        price: "£65",
-      },
-      {
-        duration: "1 Hour 30 minutes",
-        price: "£90",
-      },
+      { duration: "30 minutes", price: "£39" },
+      { duration: "1 Hour", price: "£65" },
+      { duration: "1 Hour 30 minutes", price: "£90" },
     ],
     shortDescription:
       "Gentle, nurturing massage designed for expectant mothers.",
     fullDescription:
       "Pregnancy massage is a gentle, nurturing treatment designed to support the unique needs of expectant mothers. It helps relieve tension, reduce swelling, and promote relaxation during pregnancy.",
-    bookingLink:
-      "https://www.treatwell.co.uk/place/essence-massage-studio-london/", // Placeholder
+    bookingLink: `https://www.treatwell.co.uk/place/essence-massage-studio-london/`, // No date param in original
   },
   {
     id: 8,
@@ -188,8 +128,7 @@ const classicMassages = [
       " 60-minute sessions with great savings. Valid for one year.",
     fullDescription:
       "Package is valid for one year and you can choose any type of massage from our offer. Enjoy benefits of massage on regular basis with great price tag!",
-    bookingLink:
-      "https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TP5642828%22%2C%22optionIds%22%3A%5B%2211295031%22%5D%7D%5D&date=2025-06-03", // Placeholder
+    bookingLink: `https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TP5642828%22%2C%22optionIds%22%3A%5B%2211295031%22%5D%7D%5D&date=${today}`,
   },
   {
     id: 9,
@@ -207,8 +146,7 @@ const classicMassages = [
       "Three 30-minute sessions at reduced price. Valid for one year.",
     fullDescription:
       "Reduced price of treatment with our new x 3 sessions package deal. Package is valid for one year and you can choose any type of massage from our offer. *Length of treatment depends on chosen package deal",
-    bookingLink:
-      "https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TP5642835%22%2C%22optionIds%22%3A%5B%2211295052%22%5D%7D%5D&date=2025-06-03", // Placeholder
+    bookingLink: `https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TP5642835%22%2C%22optionIds%22%3A%5B%2211295052%22%5D%7D%5D&date=${today}`,
   },
   {
     id: 10,
@@ -226,8 +164,7 @@ const classicMassages = [
       "Three 90-minute sessions with maximum savings. Valid for one year.",
     fullDescription:
       "Reduced price of treatment with our new x 3 sessions package deal. Package is valid for one year and you can choose any type of massage from our offer. *Length of treatment depends on chosen package deal",
-    bookingLink:
-      "https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TP5642848%22%2C%22optionIds%22%3A%5B%2211295054%22%5D%7D%5D&date=2025-06-03", // Placeholder
+    bookingLink: `https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TP5642848%22%2C%22optionIds%22%3A%5B%2211295054%22%5D%7D%5D&date=${today}`,
   },
 ];
 
@@ -237,50 +174,30 @@ const therapeuticMassages = [
     name: "Sport Massage",
     icon: "🏃‍♂️",
     pricing: [
-      {
-        duration: "30 minutes",
-        price: "£39",
-      },
-      {
-        duration: "1 Hour",
-        price: "£65",
-      },
-      {
-        duration: "1 Hour 30 minutes",
-        price: "£90",
-      },
+      { duration: "30 minutes", price: "£39" },
+      { duration: "1 Hour", price: "£65" },
+      { duration: "1 Hour 30 minutes", price: "£90" },
     ],
     shortDescription:
       "Essential for athletes to increase circulation and promote fast recovery.",
     fullDescription:
       "Every serious athlete understands the importance of a regular self-care. Sports massage helps increase blood circulation, promotes muscle growth and encourages a fast recovery ensuring you are fit and ready to perform again as soon as possible. If you want to compete at the top of your game, sports massage is an essential part of your self-care and routine maintenance.",
-    bookingLink:
-      "https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5375517%22%2C%22optionIds%22%3A%5B%2210235653%22%5D%7D%5D&date=2025-06-03",
+    bookingLink: `https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5375517%22%2C%22optionIds%22%3A%5B%2210235653%22%5D%7D%5D&date=${today}`,
   },
   {
     id: 11,
     name: "Therapeutic Massage",
     icon: "🩺",
     pricing: [
-      {
-        duration: "30 minutes",
-        price: "£39",
-      },
-      {
-        duration: "1 Hour",
-        price: "£65",
-      },
-      {
-        duration: "1 Hour 30 minutes",
-        price: "£90",
-      },
+      { duration: "30 minutes", price: "£39" },
+      { duration: "1 Hour", price: "£65" },
+      { duration: "1 Hour 30 minutes", price: "£90" },
     ],
     shortDescription:
       "Firmer pressure targeting specific muscle knots and trigger points.",
     fullDescription:
       "During a therapeutic massage, a firmer pressure is used and more specific attention is paid to muscle knots or trigger points. If you have specific muscles or trigger points that need individual attention, a therapeutic massage can help ease tension, increase range of motion and relieve chronic pain.",
-    bookingLink:
-      "https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5380897%22%2C%22optionIds%22%3A%5B%2210246307%22%5D%7D%5D&date=2025-06-03",
+    bookingLink: `https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TR5380897%22%2C%22optionIds%22%3A%5B%2210246307%22%5D%7D%5D&date=${today}`,
   },
 ];
 
