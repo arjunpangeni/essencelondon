@@ -167,6 +167,7 @@ const classicMassages = [
     bookingLink: `https://www.treatwell.co.uk/availability?venueId=459617&proposedServices=%5B%7B%22menuItemId%22%3A%22TP5642848%22%2C%22optionIds%22%3A%5B%2211295054%22%5D%7D%5D&date=${today}`,
   },
 ];
+// with new links
 
 const therapeuticMassages = [
   {
