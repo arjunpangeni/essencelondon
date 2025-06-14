@@ -17,16 +17,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
+        <link rel="apple-touch-icon" sizes="180x180" href="/essencelogo.png" />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-17173815655"
         ></script>
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
@@ -35,7 +31,7 @@ export default function RootLayout({ children }) {
             gtag('config', 'AW-17173815655');
           `,
           }}
-        />
+        /> */}
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <ThemeProvider
