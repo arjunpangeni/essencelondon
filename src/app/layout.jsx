@@ -10,13 +10,18 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Essence Massage Studio London",
   description:
-    "Professional massage therapy and wellness in Chiswick, London. Book aromatherapy, deep tissue, Swedish, sports, and pregnancy massages with certified therapists.",
+    "Certified massage therapists in Chiswick, London. Book aromatherapy, deep tissue, Swedish, sports & pregnancy massages for relaxation & wellness.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-17173815655"

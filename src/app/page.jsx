@@ -11,76 +11,13 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Head from "next/head";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
-// Featured services data (only 4)
-// const featuredServices = [
-//   {
-//     id: 1,
-//     name: "Deep Tissue Massage",
-//     icon: "💪",
-//     pricing: [
-//       {
-//         duration: "30 minutes",
-//         price: "£35.10",
-//         originalPrice: "£39",
-//         discount: "10%",
-//       },
-//       {
-//         duration: "1 Hour",
-//         price: "£58.50",
-//         originalPrice: "£65",
-//         discount: "10%",
-//       },
-//     ],
-//     shortDescription:
-//       "Firmer pressure targeting muscle knots and trigger points for tension relief.",
-//     color: "from-pink-500 via-pink-600 to-purple-600",
-//   },
-//   {
-//     id: 2,
-//     name: "Swedish Massage",
-//     icon: "🌿",
-//     pricing: [
-//       {
-//         duration: "30 minutes",
-//         price: "£35.10",
-//         originalPrice: "£39",
-//         discount: "10%",
-//       },
-//       {
-//         duration: "1 Hour",
-//         price: "£58.50",
-//         originalPrice: "£65",
-//         discount: "10%",
-//       },
-//     ],
-//     shortDescription:
-//       "Perfect for stress relief and resetting postural problems from repetitive motions.",
-//     color: "from-purple-500 via-purple-600 to-indigo-600",
-//   },
-//   {
-//     id: 3,
-//     name: "Aromatherapy Massage",
-//     icon: "🌸",
-//     pricing: [
-//       {
-//         duration: "30 minutes",
-//         price: "£35.10",
-//         originalPrice: "£39",
-//         discount: "10%",
-//       },
-//       {
-//         duration: "1 Hour",
-//         price: "£58.50",
-//         originalPrice: "£65",
-//         discount: "10%",
-//       },
-//     ],
-//     shortDescription:
-//       "Swedish massage techniques combined with essential oil aromatherapy.",
-//     color: "from-indigo-500 via-indigo-600 to-pink-600",
-//   },
-// ];
 const highlightServices = [
   {
     id: 1,
@@ -147,8 +84,6 @@ const testimonials = [
   },
 ];
 
-// (metadata moved to metadata.js)
-
 export default function Home() {
   return (
     <>
@@ -202,12 +137,12 @@ export default function Home() {
           {/* Background Image using next/image */}
           <div className="absolute inset-0 -z-10 rounded-2xl shadow-2xl overflow-hidden">
             <Image
-              src="/essencemain1.jpg"
+              src="/test.png"
               alt="Essence Massage Studio background"
               fill
               sizes="100vw"
               priority
-              quality={50}
+              quality={90}
               className="object-cover object-center w-full h-full"
             />
           </div>
@@ -217,48 +152,44 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-center">
               <div className="md:col-span-2 space-y-6">
                 <div className="space-y-4">
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]">
-                    <span className="block text-gray-900 dark:text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]">
-                      Serenity
-                    </span>
-                    <span className="block bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]">
-                      Massage
-                    </span>
-                    <span className="block text-gray-900 dark:text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]">
-                      Retreat!
+                  <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] text-balance">
+                    <span className="block text-gray-900  mt-2">
+                      <span className="text-black ">
+                        Professional Massage Therapy
+                      </span>{" "}
+                      in
+                      <span className="text-pink-600"> Chiswick, London</span>
                     </span>
                   </h1>
 
-                  <p className="text-lg sm:text-xl text-gray-900 dark:text-white max-w-2xl font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.20)]">
+                  <p className="text-lg sm:text-xl text-black dark:text-white max-w-2xl font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.20)]">
                     Escape the everyday stress with our calming massages.
                     Experience the ultimate in relaxation and wellness.
                   </p>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-3 max-w-md ml-0 md:ml-0 md:mr-auto  rounded-xl p-4 ">
                   <div className="flex items-center space-x-3">
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center">
                       <Check className="h-3 w-3 text-white" />
                     </div>
-                    <span className="text-base text-gray-700 dark:text-gray-300 font-medium">
+                    <span className="text-base text-gray-900 dark:text-white font-medium">
                       Aromatherapy Massage
                     </span>
                   </div>
-
                   <div className="flex items-center space-x-3">
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 flex items-center justify-center">
                       <Check className="h-3 w-3 text-white" />
                     </div>
-                    <span className="text-base text-gray-700 dark:text-gray-300 font-medium">
+                    <span className="text-base text-gray-900 dark:text-gray-100 font-medium">
                       Deep Tissue Massage
                     </span>
                   </div>
-
                   <div className="flex items-center space-x-3">
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 flex items-center justify-center">
                       <Check className="h-3 w-3 text-white" />
                     </div>
-                    <span className="text-base text-gray-700 dark:text-gray-300 font-medium">
+                    <span className="text-base text-gray-900 dark:text-gray-100 font-medium">
                       Swedish Massage
                     </span>
                   </div>
@@ -266,7 +197,7 @@ export default function Home() {
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 flex items-center justify-center">
                       <Check className="h-3 w-3 text-white" />
                     </div>
-                    <span className="text-base text-gray-700 dark:text-gray-300 font-medium">
+                    <span className="text-base text-gray-900 dark:text-gray-100 font-medium">
                       Pregnancy Massage
                     </span>
                   </div>
@@ -282,23 +213,6 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-
-              {/* Right Side - Compact Promo Circle */}
-              {/* <div className="md:col-span-1 flex justify-center md:justify-end">
-                <div className="relative">
-                  <div className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 bg-white dark:bg-gray-800 rounded-full flex flex-col items-center justify-center shadow-2xl border-4 border-gradient-to-r from-pink-500 to-purple-500 transform rotate-6 hover:rotate-3 transition-transform duration-300">
-                    <p className="text-[10px] md:text-xs font-bold text-center text-gray-900 dark:text-gray-100 mb-1">
-                      BOOK NOW FOR
-                    </p>
-                    <p className="text-lg md:text-xl lg:text-2xl font-bold text-center bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent mb-1">
-                      10% OFF
-                    </p>
-                    <p className="text-[10px] md:text-xs font-bold text-center text-gray-900 dark:text-gray-100">
-                      FIRST SESSION!
-                    </p>
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         </section>
@@ -307,15 +221,15 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="flex items-center justify-center space-x-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
+                {/* <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
                   <Sparkles className="h-6 w-6 text-white" />
-                </div>
+                </div> */}
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100">
                   Popular Services
                 </h2>
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
+                {/* <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
                   <Sparkles className="h-6 w-6 text-white" />
-                </div>
+                </div> */}
               </div>
               <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
                 Our most loved massage treatments, crafted to provide the
@@ -453,6 +367,169 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-16 md:py-20 lg:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 rounded-3xl p-6 sm:p-10 md:p-16 shadow-2xl border border-gray-100 dark:border-gray-600 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 via-purple-500/5 to-indigo-500/5"></div>
+              <div className="relative z-10">
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10 text-center">
+                  Everything you need to know before booking your massage
+                  session at Essence Massage Studio London.
+                </p>
+                <div className="w-full max-w-2xl mx-auto">
+                  <Accordion
+                    type="single"
+                    collapsible
+                    className="flex flex-col gap-3"
+                  >
+                    <AccordionItem
+                      value="item-1"
+                      className="group border-l-4 border-pink-400 bg-white/90 dark:bg-gray-900/80 shadow-sm hover:shadow-lg transition-all rounded-xl mb-1"
+                    >
+                      <AccordionTrigger className="flex items-center gap-3 py-4 px-4 sm:px-6 text-base sm:text-lg font-semibold text-left text-gray-900 dark:text-gray-100 focus:outline-none">
+                        <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-pink-400 to-purple-400 text-white mr-2 text-lg">
+                          ?
+                        </span>
+                        What should I expect during my first visit?
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 px-4 sm:px-6 pb-4 pt-0">
+                        Your therapist will discuss your needs and preferences,
+                        explain the process, and ensure you are comfortable
+                        before beginning your massage. We recommend arriving 10
+                        minutes early to relax and fill out a brief consultation
+                        form.
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem
+                      value="item-2"
+                      className="group border-l-4 border-pink-400 bg-white/90 dark:bg-gray-900/80 shadow-sm hover:shadow-lg transition-all rounded-xl mb-1"
+                    >
+                      <AccordionTrigger className="flex items-center gap-3 py-4 px-4 sm:px-6 text-base sm:text-lg font-semibold text-left text-gray-900 dark:text-gray-100 focus:outline-none">
+                        <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-pink-400 to-purple-400 text-white mr-2 text-lg">
+                          ?
+                        </span>
+                        How do I book a session?
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 px-4 sm:px-6 pb-4 pt-0">
+                        You can easily book online through our{" "}
+                        <Link
+                          href="/servicesbook"
+                          className="text-pink-600 dark:text-pink-400 underline"
+                        >
+                          Services
+                        </Link>{" "}
+                        or contact us directly for assistance. We offer flexible
+                        scheduling, including evenings and weekends.
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem
+                      value="item-3"
+                      className="group border-l-4 border-pink-400 bg-white/90 dark:bg-gray-900/80 shadow-sm hover:shadow-lg transition-all rounded-xl mb-1"
+                    >
+                      <AccordionTrigger className="flex items-center gap-3 py-4 px-4 sm:px-6 text-base sm:text-lg font-semibold text-left text-gray-900 dark:text-gray-100 focus:outline-none">
+                        <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-pink-400 to-purple-400 text-white mr-2 text-lg">
+                          ?
+                        </span>
+                        Are your therapists qualified?
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 px-4 sm:px-6 pb-4 pt-0">
+                        Yes, all our therapists are fully certified,
+                        experienced, and passionate about your well-being. We
+                        maintain the highest standards of professionalism and
+                        care.
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem
+                      value="item-4"
+                      className="group border-l-4 border-pink-400 bg-white/90 dark:bg-gray-900/80 shadow-sm hover:shadow-lg transition-all rounded-xl mb-1"
+                    >
+                      <AccordionTrigger className="flex items-center gap-3 py-4 px-4 sm:px-6 text-base sm:text-lg font-semibold text-left text-gray-900 dark:text-gray-100 focus:outline-none">
+                        <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-pink-400 to-purple-400 text-white mr-2 text-lg">
+                          ?
+                        </span>
+                        What types of massage do you offer?
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 px-4 sm:px-6 pb-4 pt-0">
+                        We offer Deep Tissue, Swedish, Aromatherapy, Sports,
+                        Pregnancy, Relaxing, Therapeutic, Back, Neck, Shoulders
+                        and Foot massages, as well as package deals. Each
+                        session is tailored to your needs for maximum benefit.
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem
+                      value="item-5"
+                      className="group border-l-4 border-pink-400 bg-white/90 dark:bg-gray-900/80 shadow-sm hover:shadow-lg transition-all rounded-xl mb-1"
+                    >
+                      <AccordionTrigger className="flex items-center gap-3 py-4 px-4 sm:px-6 text-base sm:text-lg font-semibold text-left text-gray-900 dark:text-gray-100 focus:outline-none">
+                        <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-pink-400 to-purple-400 text-white mr-2 text-lg">
+                          ?
+                        </span>
+                        What should I wear to my appointment?
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 px-4 sm:px-6 pb-4 pt-0">
+                        Wear comfortable clothing. You will be given privacy to
+                        undress to your comfort level, and you will be draped
+                        appropriately throughout your session.
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem
+                      value="item-6"
+                      className="group border-l-4 border-pink-400 bg-white/90 dark:bg-gray-900/80 shadow-sm hover:shadow-lg transition-all rounded-xl mb-1"
+                    >
+                      <AccordionTrigger className="flex items-center gap-3 py-4 px-4 sm:px-6 text-base sm:text-lg font-semibold text-left text-gray-900 dark:text-gray-100 focus:outline-none">
+                        <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-pink-400 to-purple-400 text-white mr-2 text-lg">
+                          ?
+                        </span>
+                        Can I request a specific therapist?
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 px-4 sm:px-6 pb-4 pt-0">
+                        Yes, you may request a specific therapist when booking.
+                        We will do our best to accommodate your preference based
+                        on availability.
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem
+                      value="item-7"
+                      className="group border-l-4 border-pink-400 bg-white/90 dark:bg-gray-900/80 shadow-sm hover:shadow-lg transition-all rounded-xl mb-1"
+                    >
+                      <AccordionTrigger className="flex items-center gap-3 py-4 px-4 sm:px-6 text-base sm:text-lg font-semibold text-left text-gray-900 dark:text-gray-100 focus:outline-none">
+                        <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-pink-400 to-purple-400 text-white mr-2 text-lg">
+                          ?
+                        </span>
+                        What is your cancellation policy?
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 px-4 sm:px-6 pb-4 pt-0">
+                        We kindly ask for at least 24 hours’ notice for
+                        cancellations or rescheduling. Late cancellations may
+                        incur a fee.
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem
+                      value="item-8"
+                      className="group border-l-4 border-pink-400 bg-white/90 dark:bg-gray-900/80 shadow-sm hover:shadow-lg transition-all rounded-xl mb-1"
+                    >
+                      <AccordionTrigger className="flex items-center gap-3 py-4 px-4 sm:px-6 text-base sm:text-lg font-semibold text-left text-gray-900 dark:text-gray-100 focus:outline-none">
+                        <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-pink-400 to-purple-400 text-white mr-2 text-lg">
+                          ?
+                        </span>
+                        Is Essence Massage Studio accessible?
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 dark:text-gray-300 px-4 sm:px-6 pb-4 pt-0">
+                        Yes, our studio is accessible and we strive to
+                        accommodate all clients. Please let us know if you have
+                        any specific needs or concerns.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </div>
               </div>
             </div>
           </div>
