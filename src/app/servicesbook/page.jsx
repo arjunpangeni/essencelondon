@@ -320,7 +320,7 @@ function ServiceCard({ service, categoryColor }) {
               className={`w-full inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r ${categoryColor} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] group/book`}
             >
               <Sparkles className="h-5 w-5 mr-2 group-hover/book:animate-pulse" />
-              <span>Book Now</span>
+              <span>{`Book ${service.name}`}</span>
             </a>
           </div>
         </div>
