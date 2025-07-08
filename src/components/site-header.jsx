@@ -64,7 +64,7 @@ const MobileLogo = memo(function MobileLogo() {
       {/* Simplified Mobile Brand Name */}
       <div className="flex flex-col">
         <span className="text-base font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent leading-tight">
-          Essence
+          Essence Massage
         </span>
         <span className="text-[10px] font-medium text-muted-foreground tracking-wide uppercase">
           Studio London
